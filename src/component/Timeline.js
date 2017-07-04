@@ -3,8 +3,9 @@
  */
 import React from 'react'
 import {Socket} from '../lib/PhoenixSocket'
+import SideSection from '../component/SideSection.js'
 import Messages from './timeline/Messages'
-import '../App.css';
+import '../App.css'
 
 export default class Timeline extends React.Component {
   constructor(props) {
@@ -22,11 +23,11 @@ export default class Timeline extends React.Component {
   componentDidMount () {
     const socket = new Socket('ws://localhost:4000/socket/websocket')
     socket.connect()
-    this.state.channel = socket.channel('rooms:lobby', {})
+    this.state.channel = socket.channel('rooms:1', {id: 1})
     this.state.channel.join()
     this.state.channel.on('recieve', (msg) => {
       this.handleMessage(msg)
-    })  }
+    })}
   componentWillUnmount () {
     this.state.channel.onClose()
   }
@@ -50,11 +51,14 @@ export default class Timeline extends React.Component {
   render () {
     return (
     <div className="Timeline">
-      <div className="input-message">
-        <input type="text" className="message" name="message" value={this.state.message} onChange={this.onChangeField}/>
+      <div className="Side-section">
+        <SideSection channels={this.props.channels}/>
       </div>
-      <button onClick={this.submitMessage}>submit</button>
-      <Messages messages={this.state.timeline} />
+      <Messages messages={this.state.timeline}/>
+      <div className="Input-message">
+        <input type="text" className="inputMessage" name="message" value={this.state.message} onChange={this.onChangeField}/>
+        <button className="submitButton" onClick={this.submitMessage}>Go</button>
+      </div>
     </div>
     )
   }

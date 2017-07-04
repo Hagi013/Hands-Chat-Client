@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family:Arial, sans-serif;
 }
 
 .App-logo {
@@ -18,9 +19,204 @@
   font-size: large;
 }
 
+.Side-section {
+  float:left;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  min-height: 900px;
+  width: 20%;
+  z-index: 2000;
+  padding-left: 20px;
+  text-align: left;
+  background-color: #4D394B;
+  color: #AB9BA9;
+}
+
 .timeline {
   list-style-type: none;
 }
+
+.inputMessage {
+  position: absolute;
+  right: 52px;
+  bottom: 15px;
+  width: 70%;
+  font-size:1.3em;
+  -webkit-box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+input:focus {
+  border:solid 1px #EEA34A;
+}
+
+.submitButton {
+  position: absolute;
+  right: 5px;
+  bottom: 15px;
+
+  /* 文字サイズを1.3emに指定 */
+  font-size: 1.3em;
+
+  /* 文字の太さをboldに指定 */
+  font-weight: bold;
+
+  /* 縦方向に10px、
+   * 横方向に30pxの余白を指定 */
+  padding: 3px 10px;
+
+  /* 文字色を白色に指定 */
+  color: #fff;
+
+  /* ボーダーをなくす */
+  border-style: none;
+
+  /* ボタンの影の指定
+   * 影の横幅を2px
+   * 縦長を2px
+   * ぼかしを3px
+   * 広がりを1px
+   * 色を#666（グレー）に指定 */
+  box-shadow: 2px 2px 3px 1px #666;
+  -moz-box-shadow: 2px 2px 3px 1px #666;
+  -webkit-box-shadow: 2px 2px 3px 1px #666;
+
+  /* テキストの影の指定
+   * 影の横幅を1px
+   * 縦長を1px
+   * ぼかしを2px
+   * 色を#000（黒）に指定 */
+  text-shadow: 1px 1px 2px #000;
+
+  /* グラデーションの指定 */
+  background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
+  background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
+
+  /* 角丸の指定 */
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 20px;
+}
+
+.submitButton:hover {
+  /* 透明度を20%に指定 */
+  opacity: 0.8;
+}
+
+/* Channel  */
+.Channel-header {
+  height: 10px;
+  padding: 20px;
+  text-align: left;
+}
+.Add-channel {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+}
+.inputChannleName {
+  text-align: left;
+
+}
+.inputChannlePurpose {
+  text-align: left;
+  margin-top: 40px;
+}
+.inputChannleMember {
+  text-align: left;
+  margin-top: 40px;
+}
+.inputChannel {
+  width: 500px;
+  font-size:1.3em;
+  -webkit-box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+  -moz-box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 1px rgba(255, 255, 255, 0.5);
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.channelAddButton {
+  position: absolute;
+  right: 5px;
+  buttom: -20px;
+  /* 文字サイズを1.3emに指定 */
+  font-size: 1.3em;
+
+  /* 文字の太さをboldに指定 */
+  font-weight: bold;
+
+  /* 縦方向に10px、
+   * 横方向に30pxの余白を指定 */
+  padding: 3px 10px;
+
+  margin-top: 30px;
+
+  /* 文字色を白色に指定 */
+  color: #fff;
+
+  /* ボーダーをなくす */
+  border-style: none;
+
+  /* ボタンの影の指定
+   * 影の横幅を2px
+   * 縦長を2px
+   * ぼかしを3px
+   * 広がりを1px
+   * 色を#666（グレー）に指定 */
+  box-shadow: 2px 2px 3px 1px #666;
+  -moz-box-shadow: 2px 2px 3px 1px #666;
+  -webkit-box-shadow: 2px 2px 3px 1px #666;
+
+  /* テキストの影の指定
+   * 影の横幅を1px
+   * 縦長を1px
+   * ぼかしを2px
+   * 色を#000（黒）に指定 */
+  text-shadow: 1px 1px 2px #000;
+
+  /* グラデーションの指定 */
+  background: -moz-linear-gradient(bottom, #36d, #248 50%, #36d);
+  background: -webkit-gradient(linear, left bottom, left top, from(#36d), color-stop(0.5, #248), to(#36d));
+
+  /* 角丸の指定 */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 8px;
+  border-radius: 5px;
+}
+
+/* SideSection */
+.Channel-list {
+  list-style-type: none;
+  position: absolute;
+  left: 0px;
+  top: 15px;
+}
+.Channel-name {
+  padding-bottom: 8px;
+}
+
+/* UserForm */
+.Button-style {
+  background:#00188f;
+  color:#fff;
+  padding:5px;
+  border-radius:5px;
+}
+.User-list {
+  list-style-type: none;
+  position: absolute;
+}
+.User-name {
+  padding-bottom: 8px;
+}
+
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
